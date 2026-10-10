@@ -24,7 +24,7 @@ public class ShortUrl {
     private String code;
 
     @Column(nullable = false , length = 2048)
-    private String orginalUrl;
+    private String originalUrl;
 
     @Column(nullable = false , updatable = false)
     private Instant createdAt;
