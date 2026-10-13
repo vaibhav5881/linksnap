@@ -32,6 +32,10 @@ public class ShortUrl {
     @Column(nullable = false)
     private Instant updatedAt;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = Instant.now();
